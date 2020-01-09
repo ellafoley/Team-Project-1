@@ -1,0 +1,80 @@
+//This executes Team project #1
+//It is a static method exercise.
+
+//Calling static methods to create a verses to a song
+public class SillySong {
+	public static void main(String[] args) {
+      verseOne ();
+      verseTwo ();
+      verseThree ();
+      verseFour ();
+      verseFive ();
+}
+      
+   
+   public static void verseOne (){
+	   System.out.println("I once wrote a program that wouldn't compile");
+      one ();
+      System.out.println(" ");
+ }
+      
+   public static void verseTwo () {
+      System.out.println("My program did nothing");
+      System.out.println("So I started typing");
+      two ();
+      one ();
+      System.out.println(" ");
+ }
+      
+    public static void verseThree () {
+      System.out.println("\"Parse error,\" cried the compiler");
+      System.out.println("Luckily I'm such a code baller.");
+      three ();
+      two ();
+      one ();
+      System.out.println(" ");
+ }
+      
+    public static void verseFour () {
+      System.out.println("Now the compiler wanted an identifier");
+      System.out.println("And I thought the situation was getting dire.");
+      four ();
+      three ();
+      two ();
+      one ();
+      System.out.println(" ");
+}
+      
+    public static void verseFive () {
+      System.out.println("Java complained it expected an enum");
+      System.out.println("Boy, these computers really are dumb!");
+      System.out.println("I added a public class and called is Scum,");
+      four ();
+      three ();
+      two ();
+      one ();
+ 
+  }
+
+      //Method for 1st verse
+      public static void one() {
+      System.out.println("I don't know why it wouldn't compile,");
+      System.out.println("My TA just smiled.");
+}
+       //method 2
+      public static void two() {
+      System.out.println("I added System.out.println(\"I <3 coding\"),");
+}
+
+      // Method for 3rd verse
+      public static void three () {
+      System.out.println("I added a backlash to escape the quotes,");
+
+}
+
+      //method 4
+      public static void four() {
+      System.out.println("I added a main method with its String[] args,");
+}
+  
+}
