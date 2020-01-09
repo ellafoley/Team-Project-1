@@ -11,13 +11,14 @@ public class SillySong {
       verseFive ();
 }
       
-   
+   //This is the first verse of the song
    public static void verseOne (){
 	   System.out.println("I once wrote a program that wouldn't compile");
       one ();
       System.out.println(" ");
  }
-      
+   
+   //This is the second verse of the song
    public static void verseTwo () {
       System.out.println("My program did nothing");
       System.out.println("So I started typing");
@@ -25,7 +26,8 @@ public class SillySong {
       one ();
       System.out.println(" ");
  }
-      
+    
+    //This is the third verse of the song
     public static void verseThree () {
       System.out.println("\"Parse error,\" cried the compiler");
       System.out.println("Luckily I'm such a code baller.");
@@ -34,7 +36,8 @@ public class SillySong {
       one ();
       System.out.println(" ");
  }
-      
+     
+     //This is the fourth verse of the song
     public static void verseFour () {
       System.out.println("Now the compiler wanted an identifier");
       System.out.println("And I thought the situation was getting dire.");
@@ -44,7 +47,8 @@ public class SillySong {
       one ();
       System.out.println(" ");
 }
-      
+    
+    //This is the fifth and final verse of the song
     public static void verseFive () {
       System.out.println("Java complained it expected an enum");
       System.out.println("Boy, these computers really are dumb!");
@@ -56,7 +60,7 @@ public class SillySong {
  
   }
 
-      //Method for 1st verse
+      //Method 1
       public static void one() {
       System.out.println("I don't know why it wouldn't compile,");
       System.out.println("My TA just smiled.");
@@ -66,7 +70,7 @@ public class SillySong {
       System.out.println("I added System.out.println(\"I <3 coding\"),");
 }
 
-      // Method for 3rd verse
+      // Method 3
       public static void three () {
       System.out.println("I added a backlash to escape the quotes,");
 
