@@ -1,2 +1,15 @@
 Team Project #1
-	Our team began by finding repetition to our code. We broke down repeated phrases in the song, marking each with a number to indicate the phrase. There were 4 repeated static methods, which were delegated among members to be written. The team decided these methods would be named after the number assigned to them (ie. One, two, three, four). While the methods were written the team lead wrote the main program, calling the static methods as appropriate. These methods were then posted to our team forum and copy and pasted into the bottom of the code. Upon compiling here, our code ran. However, Cheyenne noticed there were some more specific instructions, to call each verse as a method. The code was quickly edited to align with these standards by the team lead, while Ella created a Github for our group. We hadn’t liked the CANVAS system for sharing code and wanted to alter our future processes for group collaboration. The final code was posted to the Team Project Github for editing and team contribution.
+	Our team began by finding repetition to our code. We broke down repeated phrases in the song, marking each with a number to
+	indicate the phrase. There were 4 repeated static methods, which were delegated among members to be written. The team decided 
+	these methods would be named after the number assigned to them (ie. One, two, three, four). While the methods were written the
+	team lead wrote the main program, calling the static methods as appropriate. These methods were then posted to our team forum and 
+	copy and pasted into the bottom of the code. Upon compiling here, our code ran. However, Cheyenne noticed there were some more 
+	specific instructions, to call each verse as a method. The code was quickly edited to align with these standards by the team lead,
+	while Ella created a Github for our group. We hadn’t liked the CANVAS system for sharing code and wanted to alter our future 
+	processes for group collaboration. The final code was posted to the Team Project Github for editing and team contribution.
+	
+	What the group that I am working in did was that we broke down the project and, individually worked on a smaller portion of the
+	project. Once everyone completed their portion, one person pieced all the code together and then we discussed if we liked the 
+	outcome of not. Personally, I joined the project late therefore my role was mostly understanding the inner working of the code 
+	and the helping creating the main method. The way we accomplished our goals is by communicating were each of us were in the 
+	projected and if anyone had questions we would discuss it all together. 
