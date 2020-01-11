@@ -38,3 +38,10 @@ At the beginning of the project, the team leader assigned roles to each member.
 We first started by organizing each person to write a method correlating to a repeating part of the song. 
 Writing the code itself was easy, and if I had a question, my team members would help. After each member finished their method, we submitted it on the canvas group. 
 Then it was combined into the one project. We then posted the final project on GitHub so that we can make some edits.
+
+
+
+**Ella Foley**
+
+
+The solution to the problem was easy for me to see because we had done something similar in class already. What I found to be more difficult was collaborating on it because each person in the team created a part of the final program and then we had to find a way to combine it. One problem that we ran into was that when different people contributed to one final project, the code ended up being not very neat because each person has their own coding style, and this was all combined together, so we had to find a way to fix that. The way we were able to efficiently collaborate was by using Github. This proved to be a challenge for the group because we were not familiar with it.
