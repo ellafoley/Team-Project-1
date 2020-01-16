@@ -45,3 +45,8 @@ Then it was combined into the one project. We then posted the final project on G
 
 
 The solution to the problem was easy for me to see because we had done something similar in class already. What I found to be more difficult was collaborating on it because each person in the team created a part of the final program and then we had to find a way to combine it. One problem that we ran into was that when different people contributed to one final project, the code ended up being not very neat because each person has their own coding style, and this was all combined together, so we had to find a way to fix that. The way we were able to efficiently collaborate was by using Github. This proved to be a challenge for the group because we were not familiar with it.
+
+
+**Ujal Alisker**
+
+This project was exercise in how removing redundancies from the source code. We identified the repeating verses from the poem and assigned each member of the group with responsibility to code a method for that specific verse. The overall code was then put together by out team lead. This project was simple and with little complications. The team was very quick and efficient with producing the codes. 
