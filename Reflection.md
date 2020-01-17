@@ -1,4 +1,11 @@
-**Team Project #1**  
+**Team Project #1**
+
+**Team #3**
+
+**CS210 WINTER 2020**
+
+https://github.com/ellafoley/Team-Project-1
+
 
 Our team began by finding repetition to our code. We broke down repeated phrases in the song, marking each with a number to
 indicate the phrase. There were 4 repeated static methods, which were delegated among members to be written. The team decided 
