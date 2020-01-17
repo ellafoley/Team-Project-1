@@ -1,6 +1,6 @@
 /*CS210 WINTER 2020, Created: 1/9/20, Team #3
 This executes Team project #1
-It is a static method exercise.*\
+It is a static method exercise.*/
 
 //Calling static methods to create a verses to a song
 public class SillySong {
