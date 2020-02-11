@@ -1,0 +1,1 @@
+Also required to be present in the submission will be a Word document, identifying the contributors, and the specific contributions of each, as well as describing the project's process, i.e., how did the project accomplish its goals, event by event.
