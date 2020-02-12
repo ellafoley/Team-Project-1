@@ -8,7 +8,7 @@ This will be the second of your team projects for this quarter. Data for the pro
 
 The first job of the team is to pick a project lead, whose responsibility will be to write up the team report; it must be a Word document, and it must identify the contributions of all the team members to the project, and describe the project's process that led to achieving its goal. The project deliverable will be a ZIP archive in the usual format, i.e. Java source file(s) in the prescribed format, and any data files required for its operation. Also required to be present in the submission will be a Word document, identifying the contributors, and the specific contributions of each, as well as describing the project's process, i.e., how did the project accomplish its goals, event by event.The project deliverable file must be named TeamNTP02.zip, where N is replaced by a specific team number. The project lead will submit this archive against the assignment.
 
-#### How to read the data
+### How to read the data
 
 For each year of birth YYYY after 1879, we created a comma-delimited file called yobYYYY.txt.
 Each record in the individual annual files has the format "name,sex,number," where name is 2 to 15
@@ -18,3 +18,5 @@ a tie on the number of occurrences, names are listed in alphabetical order. This
 determine a name's rank. The first record for each sex has rank 1, the second record for each sex has
 rank 2, and so forth.
 To safeguard privacy, we restrict our list of names to those with at least 5 occurrences
+
+**Example:** Mary,F,7065
