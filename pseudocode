@@ -1,15 +1,14 @@
 Yadaydayday declare class stuff
 
   Static main
-    call methods
-    
-  Static intro
-     prints intro
-     
-  Static user input
     Ask user "What name are you searching for?"
       Get name
     Ask user "What year"
       Get year
+    call methods
+    
+  Static intro
+     prints intro
       
- Static 
+ Static search method (string name, int year)
+     scanner file (data.txt)
