@@ -1,14 +1,42 @@
 Yadaydayday declare class stuff
 
   Static main
-    Ask user "What name are you searching for?"
-      Get name
-    Ask user "What year"
-      Get year
-    call methods
+     Intro();
+     search(string total)
+
     
   Static intro
      prints intro
       
- Static search method (string name, int year)
-     scanner file (data.txt)
+ Static search method (string total)
+ 
+    int total = 0; 
+ 
+     Ask user "What name are you searching for?"
+      Get name
+    string name = input.next
+    Ask user "What year"
+      Get year
+    string searchYear = YOB + year.next + .txt //names the file according to the year!!!
+    scanner file (new file( string searchYear))
+     
+     
+     WHile loop hasnextline //insures we search for all occurances of a name by repeating
+     
+         string first = gets the first token in the line, the name you are searching for
+     
+         string second = gender indicator
+         
+         string third = number of name occurances
+         
+             if first = string name
+                 total = string third
+             return total
+         system.out.println ("There are" + total + "occurances of" + string name + "in the year" + year);
+             
+            
+                 
+             
+         
+     
+     
