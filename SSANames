@@ -29,13 +29,13 @@ public class Team3TP02{
         while (String name.equals(userName)){
             if (String sex.equals("M")) {
                System.out.println("There are" + amount + "males with this name.");
-            } else if (!String sex.equals("F")){
+            } else if (String sex.equals("F") || !String sex.equals("F")){
                System.out.println("There are 0 males with this name.");
             }
             
             if (String sex.equals("F")) {
                System.out.println("There are" + amount + "females with this name.");
-            } else if (!String sex.equals("M")) {
+            } else if (String sex.equals("M") || !String sex.equals("M")) {
                System.out.println("There are 0 females with this name.");
             }
       }
