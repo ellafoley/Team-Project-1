@@ -1,5 +1,6 @@
 import java.io.*;    // All imports are here
 import java.util.*;
+import java.util.Arrays; //in next chapter, I believe this resolves our concerns with .split
 
 public class Team3TP02{
 
@@ -13,12 +14,29 @@ public class Team3TP02{
       int userNumber = console.nextInt(); 
       
       Scanner yearInput = new Scanner(new File("YOB" + userNumber + ".txt")); //declares year to search
-      ssnNames (yearInput);
+      ssnNames (yearInput, userName);
       
-   public static void ssnNames(Scanner yearInput) {
-   //reads lines from a file, and returns only characters not resting between < and >
+   public static void ssnNames(Scanner yearInput, String userName) {
+   //splits list by commas, reads each part and return amount of name
    
       while (yearInput.hasNextLine()) {
          String ssnLine = yearInput.nextLine();
+         String[] sss_list = ssnLine.split(",");
+         String name = ssn_list[0];
+         String sex = ssn_list[1];
+         String amount = ssn_list[2];
+         
+        while (String name.equals(userName)){
+            if (String sex.equals("M")) {
+               System.out.println("There are" + amount + "males with this name.");
+            } else if (!String sex.equals("F")){
+               System.out.println("There are 0 males with this name.");
+            }
+            
+            if (String sex.equals("F")) {
+               System.out.println("There are" + amount + "females with this name.");
+            } else if (!String sex.equals("M")) {
+               System.out.println("There are 0 females with this name.");
+            }
       }
    }
