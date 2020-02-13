@@ -1,12 +1,13 @@
-Yadaydayday declare class stuff
-
-  Static main
-     Intro();
-     search(string total)
-
-    
-  Static intro
-     prints intro
+import java.io.*;    // All imports are here
+import java.util.*;
+public class Team3TP02{
+   public static void main(String[] args){
+      Scanner console = new Scanner(System.in);
+      System.out.println("Hello, this program allows you to find the frequnecy of a name in a given year");
+      System.out.println("Please enter the desired name");   
+      String userName = console.next();               // I put the user input in variables, so we can use it as paramaters late
+      System.out.println("Please enter the desired year");
+      int userNumber = console.nextInt(); 
       
  Static search method (string total)
  
