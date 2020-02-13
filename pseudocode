@@ -5,7 +5,7 @@ public class Team3TP02{
       Scanner console = new Scanner(System.in);
       System.out.println("Hello, this program allows you to find the frequnecy of a name in a given year");
       System.out.println("Please enter the desired name");   
-      String userName = console.next();               // I put the user input in variables, so we can use it as paramaters late
+      String userName = console.next();               // I put the user input in variables, so we can use it as paramaters later
       System.out.println("Please enter the desired year");
       int userNumber = console.nextInt(); 
       
