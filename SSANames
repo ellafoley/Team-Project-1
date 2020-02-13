@@ -12,3 +12,22 @@ public class Team3TP02{
       System.out.println("Please enter the desired year");
       int userNumber = console.nextInt(); 
       
+   public static void stripHtmlTags(Scanner htmlInput) {
+   //reads lines from a file, and returns only characters not resting between < and >
+   
+      while (htmlInput.hasNextLine()) {
+         String codeLine = htmlInput.nextLine();
+         boolean tags = true;
+         
+         for(int searchForTags = 0; searchForTags < codeLine.length(); searchForTags++) {
+               if (codeLine.charAt(searchForTags) == '<') {
+                  tags = false;
+               } else if (codeLine.charAt(searchForTags) == '>'){
+                  tags = true;
+               } else if (tags) {
+                  System.out.print(codeLine.charAt(searchForTags));
+               }
+          }
+          System.out.println ();
+      }
+   }
