@@ -8,6 +8,17 @@ public class Team3TP02{
       String userName = console.next();               // I put the user input in variables, so we can use it as paramaters later
       System.out.println("Please enter the desired year");
       int userNumber = console.nextInt(); 
+     
+   
+   Scanner console = new Scanner(System.in);
+   // This part grabs the file for what year the user wants 
+   System.out.print("Please enter the desired year: "); 
+   int userNumber = console.nextInt();
+   String searchYear = "yob" + userNumber + ".txt"; //names the file according to the year!!!
+   Scanner input = new Scanner(new File("C:/Users/cheyk/OneDrive/Desktop/CS210/SSANames/" + searchYear)); // I was testing it out on my 
+   // computer so this is where I had the folder stored. There is probably a more general way to get to the folder but I am not 
+   // completely sure what that would be. 
+   
       
  Static search method (string total)
  
