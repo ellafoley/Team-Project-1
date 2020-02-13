@@ -19,6 +19,30 @@ public class Team3TP02{
    // computer so this is where I had the folder stored. There is probably a more general way to get to the folder but I am not 
    // completely sure what that would be. 
    
+   // this finds the name searched and will print how many females and males were named that (for example it will say soemthing like
+   // "There were 13032 females named Laura that year
+   // There were 56 males named Laura that year" or if there weren't any females with a name it would just print 
+   // "There were 5 males named Bedford that year" and would not say anything about the females.) This might be an okay solution?
+   // We could ask him if that kind of output is okay. 
+   // Also this could get split up into separate methods. 
+   while (input.hasNextLine()) { // goes until the end
+         String info = input.nextLine(); // reads a line with the commas
+         String infoSpaces = info.replace(",", " "); // changes the commas to spaces so it can use tokens
+         Scanner details = new Scanner(infoSpaces); // scanner for reading the individual line
+         String name = details.next(); // checks for name
+         if (name.equals(nameSearch)) { // checks to see if name matches the search name. Runs twice if the name appears twice in file
+            String gender = details.next(); // checks gender of name
+            if (gender.equals("F")) { // gives amount for females with this name
+               int amount1 = details.nextInt();  
+               System.out.println("There were " + amount1 + " females named " + name + " that year"); 
+            }
+            if (gender.equals("M")) { // gives amount for males with this name
+               int amount2 = details.nextInt(); 
+               System.out.println("There were " + amount2 + " males named " + name + " that year"); 
+            }
+         }
+      }
+      
       
  Static search method (string total)
  
