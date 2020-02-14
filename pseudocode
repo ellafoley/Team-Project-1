@@ -33,7 +33,7 @@ public class Team3TP02{
           }
       }
 
- 
+   scanner 
      Ask user "What name are you searching for?"
       Get name
     string name = input.next
