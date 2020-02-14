@@ -23,6 +23,16 @@ public class Team3TP02{
  Static search method (string total)
  
     int total = 0; 
+    
+    while (!validYear) {
+          year = console.nextInt();
+          if (year >= 1880 && year <= 2018) {
+              validYear = true;
+          } else {
+              System.out.print("That is not a valid year. Please enter a year from 1880 to 2018: ");
+          }
+      }
+
  
      Ask user "What name are you searching for?"
       Get name
