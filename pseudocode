@@ -46,9 +46,69 @@ public class Team3TP02{
              return total
          system.out.println ("There are" + total + "occurances of" + string name + "in the year" + year);
              
-            
-                 
              
+             
+Ella's Code:
+//Combines code we have so far. Fixes some bugs and makes output more clear for user.
+//I also added some exceptions for if the user enters something invalid.
+
+import java.io.*;
+import java.util.*;
+
+public class Team3TP02 {
+   public static void main(String[] args)
+      throws FileNotFoundException { //Exception.
+         Scanner console = new Scanner(System.in);
          
-     
-     
+         System.out.println("Hello, this program allows you to find the frequnecy of a name in a given year.");
+         
+         //Declares and initializes variables.
+         boolean exists = false;
+         String nameSearch = "";
+         String searchYear = "";
+         int userNumber = 0;
+         File file = new File("nothing");
+         while (exists == false) { //Always goes into this while loop at least once.
+            System.out.println();
+            System.out.print("Please enter the desired year (from 1880-2018): ");
+            userNumber = console.nextInt();
+            searchYear = "yob" + userNumber + ".txt"; 
+            file = new File(searchYear); //Gives access to folder as long as files are submitted with program.
+            exists = file.exists();
+            if (exists == false) { //Repeats asking for year until user gives a valid year.
+               System.out.println("You entered an invalid year. Try again!");
+            }
+         }
+         
+         System.out.println();
+         System.out.print("Please enter the desired name: ");
+         nameSearch = console.next(); //Changed variable name to nameSearch to fit following code.          
+         Scanner input = new Scanner(file);
+         
+         boolean foundName = false; //Added this so if name is not found, something else happens.
+         while (input.hasNextLine()) {
+            String info = input.nextLine();
+            String infoSpaces = info.replace(",", " ");
+            Scanner details = new Scanner(infoSpaces);
+            String name = details.next();
+            if (name.equalsIgnoreCase(nameSearch)) { //Added IgnoreCase.
+               foundName = true;
+               String gender = details.next();
+               if (gender.equals("F")) {
+                  int amount1 = details.nextInt();  
+                  System.out.println();
+                  System.out.println("There were " + amount1 + " females named " + name + " that year."); 
+               }
+               if (gender.equalsIgnoreCase("M")) { //Added IgnoreCase.
+                  int amount2 = details.nextInt(); 
+                  System.out.println();
+                  System.out.println("There were " + amount2 + " males named " + name + " that year."); 
+               }
+            }
+         }
+         //Goes here if the user enters a name not found in the file.
+         if (foundName == false) {
+            System.out.println("That name was not found in the given year.");
+         }
+    }
+}
