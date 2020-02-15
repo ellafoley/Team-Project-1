@@ -55,6 +55,41 @@ public class Team3TP02{
                  total = string third
              return total
          system.out.println ("There are" + total + "occurances of" + string name + "in the year" + year);
+         
+         
+         
+         // here is the working version of the code, i have to do some changes to it, but for now
+         
+import java.util.*;
+import java.io.*;
+
+public class Project2002 {
+    public static void main(String[] args) throws FileNotFoundException{
+        Scanner console = new Scanner(System.in);
+        System.out.print("Please enter name: ");
+        String name = console.next().toLowerCase();
+        name = name.substring(0,1).toUpperCase() + name.substring(1,name.length());
+        System.out.print("Please enter year: ");
+        String year = console.next();
+        Scanner input = new Scanner( new File("C:/Users/a_uja/Documents/JAVA/SSANames/yob" + year + ".txt"));
+        String maleFrequency = "0";
+        String femaleFrequency = "0";
+        while ( input.hasNextLine()) {
+            String current = input.nextLine();
+            if ( current.substring(0, current.indexOf(",")).equals(name)) {
+                if ( current.charAt(current.indexOf(",") + 1) == 'F') {
+                    femaleFrequency = current.substring(current.indexOf(",") + 3, current.length());
+                } 
+                else {
+                    maleFrequency = current.substring(current.indexOf(",") + 3, current.length());
+                }
+            }
+        }
+        System.out.println("male frequesncy: " + maleFrequency);
+        System.out.println("female frequency: " + femaleFrequency);
+        System.out.println();
+    }
+}
              
             
                  
