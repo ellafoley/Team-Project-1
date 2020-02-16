@@ -85,7 +85,7 @@ public class Project2002 {
                 }
             }
         }
-        System.out.println("male frequesncy: " + maleFrequency);
+        System.out.println("male frequency: " + maleFrequency);
         System.out.println("female frequency: " + femaleFrequency);
         System.out.println();
     }
