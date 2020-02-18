@@ -83,6 +83,7 @@ public class Team3TP02{
          
          
          // here is the working version of the code, i have to do some changes to it, but for now
+         //Ujal.A
          
 import java.util.*;
 import java.io.*;
@@ -224,3 +225,54 @@ public class Team3TP02 {
          }
     }
 }
+
+
+//this is final version which has the non ending query code, but I like Lee's version for non-ending query
+//Ujal.A
+
+
+import java.util.*;
+import java.io.*;
+
+public class Project2002 {
+    public static void main(String[] args) throws FileNotFoundException{
+        boolean runQuery = true;
+        Scanner console = new Scanner(System.in);
+        while (runQuery){
+            SSN(console);
+            System.out.print("Would you like a new query?");
+            if (console.next().toLowerCase().equals("no")){
+               runQuery = false;
+            }
+        }
+    }
+    public static void SSN(Scanner console) throws FileNotFoundException {
+        System.out.print("Please enter name: ");
+        String name = console.next().toLowerCase();
+        name = name.substring(0,1).toUpperCase() + name.substring(1,name.length());
+        System.out.print("Please enter year: ");
+        String year = console.next();
+        while (Integer.parseInt(year) < 1880 || Integer.parseInt(year) > 2018){
+            System.out.print("Please enter valid year: ");
+            year = console.next();
+        }
+        Scanner input = new Scanner( new File("C:/Users/a_uja/Documents/JAVA/SSANames/yob" + year + ".txt"));
+        String maleFrequency = "0";
+        String femaleFrequency = "0";
+        while ( input.hasNextLine()) {
+            String current = input.nextLine();
+            if ( current.substring(0, current.indexOf(",")).equals(name)) {
+                if ( current.charAt(current.indexOf(",") + 1) == 'F') {
+                    femaleFrequency = current.substring(current.indexOf(",") + 3, current.length());
+                } 
+                else {
+                    maleFrequency = current.substring(current.indexOf(",") + 3, current.length());
+                }
+            }
+        }
+        System.out.println("male frequesncy: " + maleFrequency);
+        System.out.println("female frequency: " + femaleFrequency);
+        System.out.println();
+    }
+}
+
