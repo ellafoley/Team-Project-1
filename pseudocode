@@ -90,6 +90,49 @@ public class Project2002 {
         System.out.println();
     }
 }
+/*Newest code edited, I used the code above, divided into methods and added an if/else statment. I had another idea for a method
+But I want to get the team's approval first, this code is fully opertnational*/
+
+import java.util.*;
+import java.io.*;
+
+public class Group3Project2{
+   public static void main(String[] args) throws FileNotFoundException{
+      Scanner console = new Scanner(System.in); //I include new consoles at the top for better organization
+      System.out.println("Hello, this program allows you to find the frequnecy of a name in a given year");
+      System.out.println();
+      System.out.println();
+      System.out.print("Please enter the desired name:  ");
+      String name = console.next().toLowerCase();
+      name = name.substring(0,1).toUpperCase() + name.substring(1,name.length());
+      System.out.print("Please enter the desired year (between 1880-2018):  ");
+      int year = console.nextInt();
+      if(year>=1880 && year<=2018){
+         nameFrequencyFinder(year, name);
+      }else{
+         System.out.println("You printed an incorrect year, please try again");
+      }
+   }      
+   public static void nameFrequencyFinder(int year, String name) throws FileNotFoundException{
+      Scanner input = new Scanner( new File("SSANames/yob" + year + ".txt"));
+      String maleFrequency = "0";
+      String femaleFrequency = "0";
+      while (input.hasNextLine()){
+         String current = input.nextLine();
+         if (current.substring(0, current.indexOf(",")).equals(name)){
+            if (current.charAt(current.indexOf(",") + 1) == 'F') {
+               femaleFrequency = current.substring(current.indexOf(",") + 3, current.length());
+            }
+            else {
+               maleFrequency = current.substring(current.indexOf(",") + 3, current.length());
+            }
+         }
+      }
+      System.out.println("male frequency: " + maleFrequency);
+      System.out.println("female frequency: " + femaleFrequency);
+      System.out.println();      
+   }         
+}
              
             
                  
