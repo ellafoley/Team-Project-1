@@ -19,7 +19,7 @@ public class Group3Project2{
       }
    }      
    public static void nameFrequencyFinder(int year, String name) throws FileNotFoundException{
-      Scanner input = new Scanner( new File("SSANames/yob" + year + ".txt"));
+      Scanner input = new Scanner( new File("yob" + year + ".txt"));
       String maleFrequency = "0";
       String femaleFrequency = "0";
       while (input.hasNextLine()){
