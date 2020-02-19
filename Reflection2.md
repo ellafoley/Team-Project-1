@@ -21,6 +21,8 @@ Most of what I did on this project was making Github a functional platform for t
 I am super cool!
 
 **Abdalrahman Shaath**
+My responsibilities in this team project where mainly organizing the code it into methods and general code organization. I also added a few strings for a more user-friendlier piece of code. I made the code more readable, not just for the user, but also for the programmer. My work was mainly organizing the code and making it more readable. Methods division was my main responsibility.
+
 
 **Ella Foley**
 
