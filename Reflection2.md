@@ -18,7 +18,7 @@ Most of what I did on this project was making Github a functional platform for t
 
 **Cheyenne Kosse**
 
-I am super cool!
+Once we figured out the basics for what we wanted the program to do, I created a very simple solution. I created a program that looked for the given name in the files for the given year and returned how many females and males had that name. I put everything into the main method, so that we could split it up into more methods later. I put the basics down into our github so that it could be expanded on. Once everyone else figured out a solution or expanded on mine, we worked together as a group to figure out which solution we believed to be the best. 
 
 **Abdalrahman Shaath**
 
