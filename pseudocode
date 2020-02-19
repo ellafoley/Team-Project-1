@@ -291,3 +291,56 @@ public class Project2002 {
 
 //////the rest of the code is same   
 
+
+Kats
+import java.io.*;
+import java.util.*;
+
+public class TeamProject2 {
+   public static void main (String[] args) 
+         throws FileNotFoundException { 
+      Scanner console = new Scanner(System.in);
+      System.out.print("Enter a name: ");
+      String name = console.nextLine();
+      System.out.print("Please enter a year from 1880 to 2018: ");
+      boolean validYear = false;
+      int year = 0;
+      while (!validYear) {
+          year = console.nextInt();
+          if (year >= 1880 && year <= 2018) {
+              validYear = true;
+          } else {
+              System.out.print("That is not a valid year. Please enter a year from 1880 to 2018: ");
+          }
+      }
+      Scanner input = new Scanner(new File("yob" + year + ".txt"));
+      PrintFrequency(nameFrequency(input,name), name, year);
+   }
+
+   public static String[] nameFrequency (Scanner input, String name ) {
+       String[] frequency = {"0","0"};
+       String check = "";
+       while(input.hasNextLine()) {
+           String text = input.nextLine();
+           check = text.substring(0,text.indexOf(","));
+           if(name.equalsIgnoreCase(check)) {
+               if(text.contains("F,")) {
+                   frequency[0] = text.substring(text.lastIndexOf(",")+1,text.length());
+               } else {
+                      frequency[1] = text.substring(text.lastIndexOf(",")+1,text.length());
+               }
+           }
+       }
+              return frequency;
+   }
+             
+   public static void PrintFrequency(String[] nameFrequency, String name, int year) {
+       if (nameFrequency[0] == "0" && nameFrequency[1] == "0") {
+           System.out.println("\nNAME NOT FOUND!");
+       }else{
+           System.out.println("The frequency of the name " + name + " in the year " + year + " for the female gender was: " + nameFrequency[0]);
+           System.out.println("The frequency of the name " + name + " in the year " + year + " for the male gender was: " + nameFrequency[1]);
+       }
+   }
+}
+
