@@ -10,7 +10,7 @@ Our team began with the lead uploading files and instructions to Github, as we h
 
 **Kat Chubarova**
 
-I have really sweet glasses!
+What I did in this project was work on a smaller piece of code that then up made a larger whole.  The difficult part of this project was making sure everyone was on the same page and making sure that the same code was able to work on everyone’s computer. What worked well is that everyone had acsess to the code via github and there was no trouble sharing it. 
 
 **Lee Janzen**
 
