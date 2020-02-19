@@ -4,21 +4,30 @@ import java.io.*;
 public class Group3Project2{
    public static void main(String[] args) throws FileNotFoundException{
       Scanner console = new Scanner(System.in); //I include new consoles at the top for better organization
+      boolean exit = false; //declared false until user exits the program
+      
       introCode();
+      while (exit ==false){
       String name = console.next().toLowerCase();
       name = name.substring(0,1).toUpperCase() + name.substring(1,name.length());
+      if (name.equals("quit")){
+         exit = true;
+      }
       System.out.print("Please enter the desired year (between 1880-2018):  ");
       int year = console.nextInt();
       if(year>=1880 && year<=2018){
          nameFrequencyFinder(year, name); //Gives access to folder as long as files are submitted with program.
-      }else{
+      }else {
          System.out.println("You entered an invalid year. Try again!");
       }
+      }
+      System.out.println("Thank you for using our program!");
    }
    
    //Intro was placed in its own method for cleaner code
    public static void introCode(){
    System.out.println("Hello, this program allows you to find the frequnecy of a name in a given year");
+   System.out.println("If you are done searching for names, simply type "quit" and the program will stop.");
       System.out.println();
       System.out.println();
       System.out.print("Please enter the desired name:  ");
