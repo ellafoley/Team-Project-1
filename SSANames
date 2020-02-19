@@ -10,18 +10,23 @@ public class Group3Project2{
       System.out.print("Please enter the desired year (between 1880-2018):  ");
       int year = console.nextInt();
       if(year>=1880 && year<=2018){
-         nameFrequencyFinder(year, name);
+         nameFrequencyFinder(year, name); //Gives access to folder as long as files are submitted with program.
       }else{
-         System.out.println("You printed an incorrect year, please try again");
+         System.out.println("You entered an invalid year. Try again!");
       }
    }
+   
+   //Intro was placed in its own method for cleaner code
    public static void introCode(){
    System.out.println("Hello, this program allows you to find the frequnecy of a name in a given year");
       System.out.println();
       System.out.println();
       System.out.print("Please enter the desired name:  ");
    }           
-   public static void nameFrequencyFinder(int year, String name) throws FileNotFoundException{
+   
+   // this finds the name searched and will print how many females and males were named that 
+   public static void nameFrequencyFinder(int year, String name) 
+      throws FileNotFoundException{
       Scanner input = new Scanner( new File("SSANames/yob" + year + ".txt"));
       String maleFrequency = "0";
       String femaleFrequency = "0";
@@ -36,8 +41,19 @@ public class Group3Project2{
             }
          }
       }
-      System.out.println("male frequency: " + maleFrequency);
-      System.out.println("female frequency: " + femaleFrequency);
+      
+      if (maleFrequency.equals("0") && femaleFrequency.equals("0")) {
+         System.out.println("That name was not found in the given year.");
+      } else if (maleFrequency.equals("0")) {
+         System.out.println("There were 0 males with this name this year.");
+         System.out.println("female frequency: " + femaleFrequency);
+       } else if (femaleFrequency.equals("0")) {
+         System.out.println("There were 0 females with this name this year.");
+         System.out.println("male frequency: " + maleFrequency);
+       } else {
+         System.out.println("male frequency: " + maleFrequency);
+         System.out.println("female frequency: " + femaleFrequency);
+       }
       System.out.println();      
    }         
 }
