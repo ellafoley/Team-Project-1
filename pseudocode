@@ -276,3 +276,18 @@ public class Project2002 {
     }
 }
 
+//////just a small minor change at main method to make it shorter and simpler
+
+import java.util.*;
+import java.io.*;
+
+public class Project2002 {
+    public static void main(String[] args) throws FileNotFoundException{
+        Scanner console = new Scanner(System.in);
+        while (true){
+            SSN(console);
+        }
+    }
+
+//////the rest of the code is same   
+
