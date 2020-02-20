@@ -21,7 +21,7 @@ Most of what I did on this project was making Github a functional platform for t
 Once we figured out the basics for what we wanted the program to do, I created a very simple solution. I created a program that looked for the given name in the files for the given year and returned how many females and males had that name. I put everything into the main method, so that we could split it up into more methods later. I put the basics down into our github so that it could be expanded on. Once everyone else figured out a solution or expanded on mine, we worked together as a group to figure out which solution we believed to be the best. 
 
 **Abdalrahman Shaath**
-My responsibilities in this team project where mainly organizing the code it into methods and general code organization. I also added a few strings for a more user-friendlier piece of code. I made the code more readable, not just for the user, but also for the programmer. My work was mainly organizing the code and making it more readable. Methods division was my main responsibility.
+My responsibilities in this team project where mainly organizing the code it into methods and general code organization. I also added a few strings for a more user-friendlier piece of code. I made the code more readable, not just for the user, but also for the programmer. My work was mainly organizing the code and making it more readable. Methods division was my main responsibility. I also did some de-bugging work, just in general making the code run as intended.
 
 
 **Ella Foley**
@@ -31,5 +31,3 @@ I combined the beginning code we had and fixed some bugs in it. I also made the 
 **Ujal Alisker**
 
 This project was little more difficult to divide it up to small parts for each individidual team members, thus we worked individually on it and brought our codes together. I started out by writing the code in a very primative way and worked my way out with little bugs here and there. The important bug to fix was one, where the code shouldnt crash if wrong year digit was entered and second, where the user gets to do unlimited searches up untill user decides to quit. Our team lead did a good job meshing the codes together and putting together the submiting project.
-
-
