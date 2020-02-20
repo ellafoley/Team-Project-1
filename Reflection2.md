@@ -30,4 +30,6 @@ I combined the beginning code we had and fixed some bugs in it. I also made the 
 
 **Ujal Alisker**
 
-fgngnghn
+This project was little more difficult to divide it up to small parts for each individidual team members, thus we worked individually on it and brought our codes together. I started out by writing the code in a very primative way and worked my way out with little bugs here and there. The important bug to fix was one, where the code shouldnt crash if wrong year digit was entered and second, where the user gets to do unlimited searches up untill user decides to quit. Our team lead did a good job meshing the codes together and putting together the submiting project.
+
+
