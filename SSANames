@@ -27,7 +27,7 @@ public class Group3Project2{
    //Intro was placed in its own method for cleaner code
    public static void introCode(){
    System.out.println("Hello, this program allows you to find the frequnecy of a name in a given year");
-   System.out.println("If you are done searching for names, simply type "quit" and the program will stop.");
+   System.out.println("If you are done searching for names, simply type \"quit\" and the program will stop."); //added "" to quit.
       System.out.println();
       System.out.println();
       System.out.print("Please enter the desired name:  ");
@@ -36,7 +36,7 @@ public class Group3Project2{
    // this finds the name searched and will print how many females and males were named that 
    public static void nameFrequencyFinder(int year, String name) 
       throws FileNotFoundException{
-      Scanner input = new Scanner( new File("SSANames/yob" + year + ".txt"));
+      Scanner input = new Scanner( new File("yob" + year + ".txt")); //took out SSANames.
       String maleFrequency = "0";
       String femaleFrequency = "0";
       while (input.hasNextLine()){
