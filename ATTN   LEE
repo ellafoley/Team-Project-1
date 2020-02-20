@@ -1,0 +1,13 @@
+public static void main(String[] args) throws FileNotFoundException {
+        boolean runQuery = true;
+        Scanner console = new Scanner(System.in);
+        while (runQuery){
+            SSN(console);
+            System.out.print("Would you like a new query?");
+            if (console.next().toLowerCase().equals("no")){
+               runQuery = false;
+            }
+        }
+    }
+    
+    //try adding this
