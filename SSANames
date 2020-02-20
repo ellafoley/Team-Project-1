@@ -7,22 +7,28 @@ public class Group3Project2{
       boolean exit = false; //declared false until user exits the program
       
       introCode();
-      while (exit ==false){
-      String name = console.next().toLowerCase();
-      name = name.substring(0,1).toUpperCase() + name.substring(1,name.length());
-      if (name.equals("quit")){
-         exit = true;
-      }
-      System.out.print("Please enter the desired year (between 1880-2018):  ");
-      int year = console.nextInt();
-      if(year>=1880 && year<=2018){
-         nameFrequencyFinder(year, name); //Gives access to folder as long as files are submitted with program.
-      }else {
-         System.out.println("You entered an invalid year. Try again!");
-      }
-      }
-      System.out.println("Thank you for using our program!");
+      namePrompt(console);
    }
+   
+   //Prompts the user and finds frequency of name until the sentinel is seen 
+      public static void nameFinder(Scanner console) throws FileNotFoundException {
+         System.out.println("Please enter the desired name (quit to exit): "); 
+         String name = console.next().toLowerCase(); 
+         while (!name.equals("quit")) {
+            name = name.substring(0,1).toUpperCase() + name.substring(1,name.length());
+            System.out.print("Please enter the desired year (between 1880-2018):  ");
+            int year = console.nextInt();
+            if (year>=1880 && year<=2018){
+               nameFrequencyFinder(year, name); //Gives access to folder as long as files are submitted with program.
+            } else {
+               System.out.println("You entered an invalid year. Try again!");
+            }
+            System.out.println("Please enter the desired name (quit to exit): ");
+            name = console.next().toLowerCase();
+         }
+         System.out.println("Thank you for using our program!");
+      }
+
    
    //Intro was placed in its own method for cleaner code
    public static void introCode(){
@@ -30,7 +36,7 @@ public class Group3Project2{
    System.out.println("If you are done searching for names, simply type \"quit\" and the program will stop."); //added "" to quit.
       System.out.println();
       System.out.println();
-      System.out.print("Please enter the desired name:  ");
+      //took out the prompt for name because it is part of loop 
    }           
    
    // this finds the name searched and will print how many females and males were named that 
