@@ -7,7 +7,7 @@ public class Group3Project2{
       boolean exit = false; //declared false until user exits the program
       
       introCode();
-      namePrompt(console);
+      nameFinder(console);
    }
    
    //Prompts the user and finds frequency of name until the sentinel is seen 
