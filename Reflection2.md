@@ -10,7 +10,7 @@ Our team began with the lead uploading files and instructions to Github, as we h
 
 **Kat Chubarova**
 
-I have really sweet glasses!
+I contributed some great psuedocode to this project, and helped by offering up new code solutions.
 
 **Lee Janzen**
 
