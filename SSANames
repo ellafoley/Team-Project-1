@@ -4,33 +4,33 @@ import java.io.*;
 public class Group3Project2{
    public static void main(String[] args) throws FileNotFoundException{
       Scanner console = new Scanner(System.in); //I include new consoles at the top for better organization
-      boolean exit = false; //declared false until user exits the program
-      
+      boolean exit = false; //declared false until user exits the program  
       introCode();
-      while (exit ==false){
-      String name = console.next().toLowerCase();
-      name = name.substring(0,1).toUpperCase() + name.substring(1,name.length());
-      if (name.equals("quit")){
-         exit = true;
-      }
-      System.out.print("Please enter the desired year (between 1880-2018):  ");
-      int year = console.nextInt();
-      if(year>=1880 && year<=2018){
-         nameFrequencyFinder(year, name); //Gives access to folder as long as files are submitted with program.
-      }else {
-         System.out.println("You entered an invalid year. Try again!");
-      }
+      while (exit == false){
+         System.out.print("Please enter the desired name:  ");
+         String name = console.next().toLowerCase();
+         if(name.equals("quit")){        //This if/else statment alows the for loop to work perfectly
+            exit=true;
+         }else{
+            name = name.substring(0,1).toUpperCase() + name.substring(1,name.length());
+            System.out.print("Please enter the desired year (between 1880-2018):  ");
+            int year = console.nextInt();
+            if(year>=1880 && year<=2018){
+               nameFrequencyFinder(year, name); //Gives access to folder as long as files are submitted with program.
+            }else{
+               System.out.println("You entered an invalid year. Try again!");
+            }      
+         }
       }
       System.out.println("Thank you for using our program!");
    }
    
    //Intro was placed in its own method for cleaner code
    public static void introCode(){
-   System.out.println("Hello, this program allows you to find the frequnecy of a name in a given year");
-   System.out.println("If you are done searching for names, simply type \"quit\" and the program will stop."); //added "" to quit.
+      System.out.println("Hello, this program allows you to find the frequnecy of a name in a given year");
+      System.out.println("If you are done searching for names, simply type \"quit\" and the program will stop."); //added "" to quit.
       System.out.println();
       System.out.println();
-      System.out.print("Please enter the desired name:  ");
    }           
    
    // this finds the name searched and will print how many females and males were named that 
@@ -39,13 +39,13 @@ public class Group3Project2{
       Scanner input = new Scanner( new File("yob" + year + ".txt")); //took out SSANames.
       String maleFrequency = "0";
       String femaleFrequency = "0";
-      while (input.hasNextLine()){
+      while(input.hasNextLine()){
          String current = input.nextLine();
-         if (current.substring(0, current.indexOf(",")).equals(name)){
-            if (current.charAt(current.indexOf(",") + 1) == 'F') {
+         if(current.substring(0, current.indexOf(",")).equals(name)){
+            if(current.charAt(current.indexOf(",") + 1) == 'F') {
                femaleFrequency = current.substring(current.indexOf(",") + 3, current.length());
             }
-            else {
+            else{
                maleFrequency = current.substring(current.indexOf(",") + 3, current.length());
             }
          }
@@ -53,13 +53,13 @@ public class Group3Project2{
       
       if (maleFrequency.equals("0") && femaleFrequency.equals("0")) {
          System.out.println("That name was not found in the given year.");
-      } else if (maleFrequency.equals("0")) {
+      }else if(maleFrequency.equals("0")) {
          System.out.println("There were 0 males with this name this year.");
          System.out.println("female frequency: " + femaleFrequency);
-       } else if (femaleFrequency.equals("0")) {
+      }else if(femaleFrequency.equals("0")) {
          System.out.println("There were 0 females with this name this year.");
          System.out.println("male frequency: " + maleFrequency);
-       } else {
+      }else{
          System.out.println("male frequency: " + maleFrequency);
          System.out.println("female frequency: " + femaleFrequency);
        }
