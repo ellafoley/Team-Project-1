@@ -26,7 +26,7 @@ My responsibilities in this team project where mainly organizing the code it int
 
 **Ella Foley**
 
-I work hard!
+I combined the beginning code we had and fixed some bugs in it. I also made the output clearer for the user. My main contribution was creating ways to catch if the user entered something invalid. I made code that checked to see if the user entered a year that was not included in the files, and if this was the case, I prompted the user to enter a valid year. I also created code that would tell the user if the name they entered was not found in the year they gave. We decided to use the ideas behind this and parts of this code in the final submission.
 
 **Ujal Alisker**
 
