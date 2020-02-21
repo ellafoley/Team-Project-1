@@ -6,24 +6,27 @@ public class Group3Project2{
       Scanner console = new Scanner(System.in); //I include new consoles at the top for better organization
       boolean exit = false; //declared false until user exits the program  
       introCode();
-      while (exit == false){
-         System.out.print("Please enter the desired name:  ");
-         String name = console.next().toLowerCase();
-         if(name.equals("quit")){        //This if/else statment alows the for loop to work perfectly
-            exit=true;
-         }else{
+   }
+   
+   //Prompts the user and finds frequency of name until the sentinel is seen 
+      public static void nameFinder(Scanner console) throws FileNotFoundException {
+         System.out.println("Please enter the desired name (quit to exit): "); 
+         String name = console.next().toLowerCase(); 
+         while (!name.equals("quit")) {
             name = name.substring(0,1).toUpperCase() + name.substring(1,name.length());
             System.out.print("Please enter the desired year (between 1880-2018):  ");
             int year = console.nextInt();
-            if(year>=1880 && year<=2018){
+            if (year>=1880 && year<=2018){
                nameFrequencyFinder(year, name); //Gives access to folder as long as files are submitted with program.
-            }else{
+            } else {
                System.out.println("You entered an invalid year. Try again!");
-            }      
+            }
+            System.out.println("Please enter the desired name (quit to exit): ");
+            name = console.next().toLowerCase();
          }
+         System.out.println("Thank you for using our program!");
       }
-      System.out.println("Thank you for using our program!");
-   }
+
    
    //Intro was placed in its own method for cleaner code
    public static void introCode(){
