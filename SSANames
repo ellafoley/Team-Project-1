@@ -4,10 +4,8 @@ import java.io.*;
 public class Group3Project2{
    public static void main(String[] args) throws FileNotFoundException{
       Scanner console = new Scanner(System.in); //I include new consoles at the top for better organization
-      boolean exit = false; //declared false until user exits the program
-      
+      boolean exit = false; //declared false until user exits the program  
       introCode();
-      nameFinder(console);
    }
    
    //Prompts the user and finds frequency of name until the sentinel is seen 
@@ -32,11 +30,10 @@ public class Group3Project2{
    
    //Intro was placed in its own method for cleaner code
    public static void introCode(){
-   System.out.println("Hello, this program allows you to find the frequnecy of a name in a given year");
-   System.out.println("If you are done searching for names, simply type \"quit\" and the program will stop."); //added "" to quit.
+      System.out.println("Hello, this program allows you to find the frequnecy of a name in a given year");
+      System.out.println("If you are done searching for names, simply type \"quit\" and the program will stop."); //added "" to quit.
       System.out.println();
       System.out.println();
-      //took out the prompt for name because it is part of loop 
    }           
    
    // this finds the name searched and will print how many females and males were named that 
@@ -45,13 +42,13 @@ public class Group3Project2{
       Scanner input = new Scanner( new File("yob" + year + ".txt")); //took out SSANames.
       String maleFrequency = "0";
       String femaleFrequency = "0";
-      while (input.hasNextLine()){
+      while(input.hasNextLine()){
          String current = input.nextLine();
-         if (current.substring(0, current.indexOf(",")).equals(name)){
-            if (current.charAt(current.indexOf(",") + 1) == 'F') {
+         if(current.substring(0, current.indexOf(",")).equals(name)){
+            if(current.charAt(current.indexOf(",") + 1) == 'F') {
                femaleFrequency = current.substring(current.indexOf(",") + 3, current.length());
             }
-            else {
+            else{
                maleFrequency = current.substring(current.indexOf(",") + 3, current.length());
             }
          }
@@ -59,13 +56,13 @@ public class Group3Project2{
       
       if (maleFrequency.equals("0") && femaleFrequency.equals("0")) {
          System.out.println("That name was not found in the given year.");
-      } else if (maleFrequency.equals("0")) {
+      }else if(maleFrequency.equals("0")) {
          System.out.println("There were 0 males with this name this year.");
          System.out.println("female frequency: " + femaleFrequency);
-       } else if (femaleFrequency.equals("0")) {
+      }else if(femaleFrequency.equals("0")) {
          System.out.println("There were 0 females with this name this year.");
          System.out.println("male frequency: " + maleFrequency);
-       } else {
+      }else{
          System.out.println("male frequency: " + maleFrequency);
          System.out.println("female frequency: " + femaleFrequency);
        }
