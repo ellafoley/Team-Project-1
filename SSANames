@@ -6,7 +6,7 @@ public class Group3Project2{
       Scanner console = new Scanner(System.in); //I include new consoles at the top for better organization
       boolean exit = false; //declared false until user exits the program  
       introCode();
-      nameFinder();
+      nameFinder(console);
    }
    
    //Prompts the user and finds frequency of name until the sentinel is seen 
